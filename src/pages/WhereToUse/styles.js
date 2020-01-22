@@ -56,24 +56,17 @@ export const Category = styled.div`
 export const Round = styled.button`
   border: none;
   background: #fa8929;
-  margin: 30px;
+  margin: 0 auto;
   width: 100px;
   height: 100px;
   border-radius: 50%;
   color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: inline-block;
   &:hover {
     transition: all 0.2s ease-in-out;
     background-color: #fe7600;
     cursor: pointer;
     transform: scale(1.1,1.1);
-  }
-  @media (max-width: 770px) {
-    margin: 15px;
-    width: 80px;
-    height: 80px;
   }
 `;
 
@@ -81,22 +74,37 @@ export const ItemList = styled.li`
   align-items: center;
   display: flex;
   margin: 30px;
+  background:white;
   border: 2px solid #fa8929;
   border-radius: 15px;
   padding: 10px;
-  justify-content: space-evenly;
-  width: 40%;
+  
 `;
-
+export const CenterImg = styled.div` 
+  width: 100%; 
+  display: flex;
+  justify-items: center;
+`;
 export const Img = styled.img`
-  height: 170px;
+  width: 170px;
+  height: 150px;
+  margin: 0 auto;
   border-radius: 10px;
 `;
 
 export const Info = styled.div`
-  margin: 0 0 0 20px;
+  display:flex;
+  text-align: center;
+  flex-direction: column;
+  color: black;
+  &>h3, &>h2{
+    font-size: 1.3em;
+  }
+  &>h2{
+    margin-bottom: 15px;
+  }
   &>h3{
-    font-weight: normal !important;
+    font-weight: normal;
   }
 `;
 
